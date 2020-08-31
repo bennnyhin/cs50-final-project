@@ -5,5 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    <h1>{{ text }}</h1>
+    {% for name in test %}
+        <h1>{{ name }}</h1>
+    {% endfor %}
 {% endblock %}

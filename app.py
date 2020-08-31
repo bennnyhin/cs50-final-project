@@ -13,8 +13,8 @@ def home():
 
 @app.route("/test")
 def test():
-    text="aldsfjkljsdaf"
-    return render_template("test.html", text=text)   
+    test = ["joe", "bob", "rob"]
+    return render_template("test.html", test=test)   
 
 if __name__ == "__main__":
     app.run()
