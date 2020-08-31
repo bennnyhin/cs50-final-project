@@ -8,13 +8,14 @@ def home():
     if request.method == "GET":
         return render_template("index.html")
     else:
-        text="adjfsklasdfl"
-        render_template("test.html", text=text)
+        text=request.form.get("text")
+        print (text)
+        return render_template("test.html", text=text)
 
-@app.route("/test")
-def test():
-    test = ["joe", "bob", "rob"]
-    return render_template("test.html", test=test)   
+# @app.route("/test")
+# def test():
+#     test = ["joe", "bob", "rob"]
+#     return render_template("test.html", test=test)   
 
 if __name__ == "__main__":
     app.run()
