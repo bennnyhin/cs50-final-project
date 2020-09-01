@@ -11,10 +11,10 @@ def home():
         print (text)
         return render_template("test.html", text=text)
 
-# @app.route("/test")
-# def test():
-#     test = ["joe", "bob", "rob"]
-#     return render_template("test.html", test=test)   
+@app.route("/test")
+def test():
+    test = ["joe", "bob", "rob"]
+    return render_template("test.html", text=test)   
 
 if __name__ == "__main__":
     app.run()
